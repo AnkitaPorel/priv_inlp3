@@ -43,4 +43,4 @@ python3 wordsim.py <trained_model.pt>
 
 ## Links
 Download the pretrained `.pt` files from the following links:
-- [INLP_3](https://drive.google.com/drive/folders/17s_IAANx46_Y-BDggRL5ILjaot68zqtw?usp=sharing)
+- [2024201043_assignment3](https://drive.google.com/drive/folders/1cCQo2aflug64aTN7jotuM_2HOm12vs81?usp=sharing)

@@ -82,6 +82,15 @@ This report details each method’s implementation, analyzes their performance, 
   - **No Optimization**: Lacks iterative refinement, limiting adaptability to dataset quirks.
 - **Analysis**: The low score reflects SVD’s struggle with a small corpus, where frequent but uninformative pairs dominate the matrix.
 
+- **Example CSV File Values**:
+| Word1        | Word2     | Human_Score | Model_Score  |
+|--------------|-----------|-------------|--------------|
+| admission    | ticket    | 5.536       | -0.14178976  |
+| alcohol      | chemistry | 4.125       | 0.0865398    |
+| aluminum     | metal     | 6.625       | 0.2108413    |
+| announcement | effort    | 2.0625      | 0.19951226   |
+| announcement | news      | 7.1875      | 0.25587785   |
+
 ![alt text](svd.png){width=50%}
 
 ### CBOW (Spearman: 0.261)
@@ -96,6 +105,15 @@ This report details each method’s implementation, analyzes their performance, 
   - **Training Time**: 50 epochs may be insufficient or excessive, depending on convergence not fully optimized.
 - **Analysis**: CBOW’s moderate score suggests neural optimization helps, but its design is less effective on small datasets.
 
+- **CSV File Values**:
+| Word1        | Word2     | Human_Score | Model_Score  |
+|--------------|-----------|-------------|--------------|
+| admission    | ticket    | 5.536       | 0.1421436    |
+| alcohol      | chemistry | 4.125       | 0.33219993   |
+| aluminum     | metal     | 6.625       | 0.39743933   |
+| announcement | effort    | 2.0625      | 0.19678076   |
+| announcement | news      | 7.1875      | 0.34713966   |
+
 ![alt text](cbow.png){width=50%}
 
 ### Skip-gram (Spearman: 0.383)
@@ -109,6 +127,15 @@ This report details each method’s implementation, analyzes their performance, 
   - **Training Time**: Iterative training is slower than SVD, though mitigated by fewer epochs (15).
   - **Rare Words**: Subsampling may discard useful rare word contexts, though mitigated by `UNK`.
 - **Analysis**: The 0.387 score highlights Skip-gram’s strength in capturing local semantics, optimized by negative sampling and subsampling.
+
+- **CSV File Values**:
+| Word1        | Word2     | Human_Score | Model_Score  |
+|--------------|-----------|-------------|--------------|
+| admission    | ticket    | 5.536       | 0.11766772   |
+| alcohol      | chemistry | 4.125       | 0.29959887   |
+| aluminum     | metal     | 6.625       | 0.35018533   |
+| announcement | effort    | 2.0625      | 0.03010396   |
+| announcement | news      | 7.1875      | 0.28693947   |
 
 ![alt text](skipgram.png){width=50%}
 
